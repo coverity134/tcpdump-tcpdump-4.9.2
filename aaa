@@ -1,0 +1,350 @@
+rm -f setsignal.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./setsignal.c
+rm -f tcpdump.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./tcpdump.c
+rm -f version.c
+if grep GIT ./VERSION >/dev/null; then \
+	read ver <./VERSION; \
+	echo $ver | tr -d '\012'; \
+	date +_%Y_%m_%d; \
+else \
+	cat ./VERSION; \
+fi | sed -e 's/.*/const char version[] = "&";/' > version.c
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c version.c
+rm -f addrtoname.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./addrtoname.c
+rm -f addrtostr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./addrtostr.c
+rm -f af.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./af.c
+rm -f ascii_strcasecmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./ascii_strcasecmp.c
+rm -f checksum.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./checksum.c
+rm -f cpack.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./cpack.c
+rm -f gmpls.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./gmpls.c
+rm -f gmt2local.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./gmt2local.c
+rm -f in_cksum.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./in_cksum.c
+rm -f ipproto.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./ipproto.c
+rm -f l2vpn.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./l2vpn.c
+rm -f machdep.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./machdep.c
+rm -f nlpid.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./nlpid.c
+rm -f oui.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./oui.c
+rm -f parsenfsfh.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./parsenfsfh.c
+rm -f print.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print.c
+rm -f print-802_11.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-802_11.c
+rm -f print-802_15_4.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-802_15_4.c
+rm -f print-ah.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ah.c
+rm -f print-ahcp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ahcp.c
+rm -f print-aodv.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-aodv.c
+rm -f print-aoe.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-aoe.c
+rm -f print-ap1394.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ap1394.c
+rm -f print-arcnet.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-arcnet.c
+rm -f print-arp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-arp.c
+rm -f print-ascii.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ascii.c
+rm -f print-atalk.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-atalk.c
+rm -f print-atm.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-atm.c
+rm -f print-babel.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-babel.c
+rm -f print-beep.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-beep.c
+rm -f print-bfd.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-bfd.c
+rm -f print-bgp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-bgp.c
+rm -f print-bootp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-bootp.c
+rm -f print-bt.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-bt.c
+rm -f print-calm-fast.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-calm-fast.c
+rm -f print-carp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-carp.c
+rm -f print-cdp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-cdp.c
+rm -f print-cfm.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-cfm.c
+rm -f print-chdlc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-chdlc.c
+rm -f print-cip.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-cip.c
+rm -f print-cnfp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-cnfp.c
+rm -f print-dccp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-dccp.c
+rm -f print-decnet.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-decnet.c
+rm -f print-dhcp6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-dhcp6.c
+rm -f print-domain.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-domain.c
+rm -f print-dtp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-dtp.c
+rm -f print-dvmrp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-dvmrp.c
+rm -f print-eap.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-eap.c
+rm -f print-egp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-egp.c
+rm -f print-eigrp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-eigrp.c
+rm -f print-enc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-enc.c
+rm -f print-esp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-esp.c
+rm -f print-ether.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ether.c
+rm -f print-fddi.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-fddi.c
+rm -f print-forces.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-forces.c
+rm -f print-fr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-fr.c
+rm -f print-frag6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-frag6.c
+rm -f print-ftp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ftp.c
+rm -f print-geneve.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-geneve.c
+rm -f print-geonet.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-geonet.c
+rm -f print-gre.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-gre.c
+rm -f print-hncp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-hncp.c
+rm -f print-hsrp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-hsrp.c
+rm -f print-http.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-http.c
+rm -f print-icmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-icmp.c
+rm -f print-icmp6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-icmp6.c
+rm -f print-igmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-igmp.c
+rm -f print-igrp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-igrp.c
+rm -f print-ip.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ip.c
+rm -f print-ip6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ip6.c
+rm -f print-ip6opts.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ip6opts.c
+rm -f print-ipcomp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ipcomp.c
+rm -f print-ipfc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ipfc.c
+rm -f print-ipnet.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ipnet.c
+rm -f print-ipx.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ipx.c
+rm -f print-isakmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-isakmp.c
+rm -f print-isoclns.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-isoclns.c
+rm -f print-juniper.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-juniper.c
+rm -f print-krb.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-krb.c
+rm -f print-l2tp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-l2tp.c
+rm -f print-lane.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lane.c
+rm -f print-ldp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ldp.c
+rm -f print-lisp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lisp.c
+rm -f print-llc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-llc.c
+rm -f print-lldp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lldp.c
+rm -f print-lmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lmp.c
+rm -f print-loopback.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-loopback.c
+rm -f print-lspping.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lspping.c
+rm -f print-lwapp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lwapp.c
+rm -f print-lwres.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-lwres.c
+rm -f print-m3ua.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-m3ua.c
+rm -f print-medsa.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-medsa.c
+rm -f print-mobile.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-mobile.c
+rm -f print-mobility.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-mobility.c
+rm -f print-mpcp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-mpcp.c
+rm -f print-mpls.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-mpls.c
+rm -f print-mptcp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-mptcp.c
+rm -f print-msdp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-msdp.c
+rm -f print-msnlb.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-msnlb.c
+rm -f print-nflog.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-nflog.c
+rm -f print-nfs.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-nfs.c
+rm -f print-nsh.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-nsh.c
+rm -f print-ntp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ntp.c
+rm -f print-null.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-null.c
+rm -f print-olsr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-olsr.c
+rm -f print-openflow-1.0.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-openflow-1.0.c
+rm -f print-openflow.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-openflow.c
+rm -f print-ospf.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ospf.c
+rm -f print-ospf6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ospf6.c
+rm -f print-otv.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-otv.c
+rm -f print-pgm.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-pgm.c
+rm -f print-pim.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-pim.c
+rm -f print-pktap.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-pktap.c
+rm -f print-ppi.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ppi.c
+rm -f print-ppp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ppp.c
+rm -f print-pppoe.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-pppoe.c
+rm -f print-pptp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-pptp.c
+rm -f print-radius.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-radius.c
+rm -f print-raw.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-raw.c
+rm -f print-resp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-resp.c
+rm -f print-rip.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rip.c
+rm -f print-ripng.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-ripng.c
+rm -f print-rpki-rtr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rpki-rtr.c
+rm -f print-rrcp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rrcp.c
+rm -f print-rsvp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rsvp.c
+rm -f print-rt6.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rt6.c
+rm -f print-rtsp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rtsp.c
+rm -f print-rx.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-rx.c
+rm -f print-sctp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sctp.c
+rm -f print-sflow.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sflow.c
+rm -f print-sip.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sip.c
+rm -f print-sl.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sl.c
+rm -f print-sll.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sll.c
+rm -f print-slow.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-slow.c
+rm -f print-smtp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-smtp.c
+rm -f print-snmp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-snmp.c
+rm -f print-stp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-stp.c
+rm -f print-sunatm.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sunatm.c
+rm -f print-sunrpc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-sunrpc.c
+rm -f print-symantec.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-symantec.c
+rm -f print-syslog.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-syslog.c
+rm -f print-tcp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-tcp.c
+rm -f print-telnet.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-telnet.c
+rm -f print-tftp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-tftp.c
+rm -f print-timed.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-timed.c
+rm -f print-tipc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-tipc.c
+rm -f print-token.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-token.c
+rm -f print-udld.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-udld.c
+rm -f print-udp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-udp.c
+rm -f print-usb.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-usb.c
+rm -f print-vjc.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vjc.c
+rm -f print-vqp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vqp.c
+rm -f print-vrrp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vrrp.c
+rm -f print-vtp.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vtp.c
+rm -f print-vxlan.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vxlan.c
+rm -f print-vxlan-gpe.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-vxlan-gpe.c
+rm -f print-wb.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-wb.c
+rm -f print-zephyr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-zephyr.c
+rm -f print-zeromq.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-zeromq.c
+rm -f netdissect.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./netdissect.c
+rm -f signature.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./signature.c
+rm -f strtoaddr.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./strtoaddr.c
+rm -f util-print.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./util-print.c
+rm -f print-smb.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./print-smb.c
+rm -f smbutil.o
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -c ./smbutil.c
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -o strlcat.o -c ./missing/strlcat.c
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2 -o strlcpy.o -c ./missing/strlcpy.c
+rm -f tcpdump
+gcc -ffloat-store -DHAVE_CONFIG_H   -D_U_="__attribute__((unused))" -I. -I/usr/include  -g -O2  -o tcpdump setsignal.o tcpdump.o version.o addrtoname.o addrtostr.o af.o ascii_strcasecmp.o checksum.o cpack.o gmpls.o gmt2local.o in_cksum.o ipproto.o l2vpn.o machdep.o nlpid.o oui.o parsenfsfh.o print.o print-802_11.o print-802_15_4.o print-ah.o print-ahcp.o print-aodv.o print-aoe.o print-ap1394.o print-arcnet.o print-arp.o print-ascii.o print-atalk.o print-atm.o print-babel.o print-beep.o print-bfd.o print-bgp.o print-bootp.o print-bt.o print-calm-fast.o print-carp.o print-cdp.o print-cfm.o print-chdlc.o print-cip.o print-cnfp.o print-dccp.o print-decnet.o print-dhcp6.o print-domain.o print-dtp.o print-dvmrp.o print-eap.o print-egp.o print-eigrp.o print-enc.o print-esp.o print-ether.o print-fddi.o print-forces.o print-fr.o print-frag6.o print-ftp.o print-geneve.o print-geonet.o print-gre.o print-hncp.o print-hsrp.o print-http.o print-icmp.o print-icmp6.o print-igmp.o print-igrp.o print-ip.o print-ip6.o print-ip6opts.o print-ipcomp.o print-ipfc.o print-ipnet.o print-ipx.o print-isakmp.o print-isoclns.o print-juniper.o print-krb.o print-l2tp.o print-lane.o print-ldp.o print-lisp.o print-llc.o print-lldp.o print-lmp.o print-loopback.o print-lspping.o print-lwapp.o print-lwres.o print-m3ua.o print-medsa.o print-mobile.o print-mobility.o print-mpcp.o print-mpls.o print-mptcp.o print-msdp.o print-msnlb.o print-nflog.o print-nfs.o print-nsh.o print-ntp.o print-null.o print-olsr.o print-openflow-1.0.o print-openflow.o print-ospf.o print-ospf6.o print-otv.o print-pgm.o print-pim.o print-pktap.o print-ppi.o print-ppp.o print-pppoe.o print-pptp.o print-radius.o print-raw.o print-resp.o print-rip.o print-ripng.o print-rpki-rtr.o print-rrcp.o print-rsvp.o print-rt6.o print-rtsp.o print-rx.o print-sctp.o print-sflow.o print-sip.o print-sl.o print-sll.o print-slow.o print-smtp.o print-snmp.o print-stp.o print-sunatm.o print-sunrpc.o print-symantec.o print-syslog.o print-tcp.o print-telnet.o print-tftp.o print-timed.o print-tipc.o print-token.o print-udld.o print-udp.o print-usb.o print-vjc.o print-vqp.o print-vrrp.o print-vtp.o print-vxlan.o print-vxlan-gpe.o print-wb.o print-zephyr.o print-zeromq.o netdissect.o signature.o strtoaddr.o util-print.o print-smb.o smbutil.o strlcat.o strlcpy.o -lcrypto -lpcap 
+rm -f libnetdissect.a
+ar cr libnetdissect.a addrtoname.o addrtostr.o af.o ascii_strcasecmp.o checksum.o cpack.o gmpls.o gmt2local.o in_cksum.o ipproto.o l2vpn.o machdep.o nlpid.o oui.o parsenfsfh.o print.o print-802_11.o print-802_15_4.o print-ah.o print-ahcp.o print-aodv.o print-aoe.o print-ap1394.o print-arcnet.o print-arp.o print-ascii.o print-atalk.o print-atm.o print-babel.o print-beep.o print-bfd.o print-bgp.o print-bootp.o print-bt.o print-calm-fast.o print-carp.o print-cdp.o print-cfm.o print-chdlc.o print-cip.o print-cnfp.o print-dccp.o print-decnet.o print-dhcp6.o print-domain.o print-dtp.o print-dvmrp.o print-eap.o print-egp.o print-eigrp.o print-enc.o print-esp.o print-ether.o print-fddi.o print-forces.o print-fr.o print-frag6.o print-ftp.o print-geneve.o print-geonet.o print-gre.o print-hncp.o print-hsrp.o print-http.o print-icmp.o print-icmp6.o print-igmp.o print-igrp.o print-ip.o print-ip6.o print-ip6opts.o print-ipcomp.o print-ipfc.o print-ipnet.o print-ipx.o print-isakmp.o print-isoclns.o print-juniper.o print-krb.o print-l2tp.o print-lane.o print-ldp.o print-lisp.o print-llc.o print-lldp.o print-lmp.o print-loopback.o print-lspping.o print-lwapp.o print-lwres.o print-m3ua.o print-medsa.o print-mobile.o print-mobility.o print-mpcp.o print-mpls.o print-mptcp.o print-msdp.o print-msnlb.o print-nflog.o print-nfs.o print-nsh.o print-ntp.o print-null.o print-olsr.o print-openflow-1.0.o print-openflow.o print-ospf.o print-ospf6.o print-otv.o print-pgm.o print-pim.o print-pktap.o print-ppi.o print-ppp.o print-pppoe.o print-pptp.o print-radius.o print-raw.o print-resp.o print-rip.o print-ripng.o print-rpki-rtr.o print-rrcp.o print-rsvp.o print-rt6.o print-rtsp.o print-rx.o print-sctp.o print-sflow.o print-sip.o print-sl.o print-sll.o print-slow.o print-smtp.o print-snmp.o print-stp.o print-sunatm.o print-sunrpc.o print-symantec.o print-syslog.o print-tcp.o print-telnet.o print-tftp.o print-timed.o print-tipc.o print-token.o print-udld.o print-udp.o print-usb.o print-vjc.o print-vqp.o print-vrrp.o print-vtp.o print-vxlan.o print-vxlan-gpe.o print-wb.o print-zephyr.o print-zeromq.o netdissect.o signature.o strtoaddr.o util-print.o print-smb.o smbutil.o strlcat.o strlcpy.o
+ranlib libnetdissect.a
